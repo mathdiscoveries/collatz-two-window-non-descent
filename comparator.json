@@ -1,0 +1,20 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "CollatzTwoWindowChallenge.collatz_two_window_tight_094476_master",
+    "CollatzTwoWindowChallenge.collatz_two_window_wide_0945_master",
+    "CollatzTwoWindowChallenge.all_shell_neverDrops_le",
+    "CollatzTwoWindowChallenge.two_pow_mul_iterate",
+    "CollatzTwoWindowChallenge.parityWord_bijective_shell",
+    "CollatzTwoWindowChallenge.suffix_shifted_bernoulli_far_bound",
+    "CollatzTwoWindowChallenge.neverDrops_one",
+    "CollatzTwoWindowChallenge.not_neverDrops_three"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

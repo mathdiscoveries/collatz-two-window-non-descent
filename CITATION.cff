@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+type: software
+message: "If you use or cite this Lean 4 formalization, please cite it using the metadata below."
+title: "Classical 3x+1 Collatz Infinite Stopping Times: Two-Window Upper Bound N_T(X) = O(X^0.94476)"
+authors:
+  - family-names: "Hughes"
+    given-names: "Tyler B."
+    orcid: "https://orcid.org/0000-0001-6221-9014"
+version: "v1.0.0"
+date-released: "2026-11-25"
+license: "Apache-2.0"
+repository-code: "https://github.com/mathdiscoveries/collatz-two-window-non-descent"
+url: "https://mathdiscoveries.org/results/collatz-two-window-non-descent"

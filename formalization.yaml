@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Classical 3x+1 Collatz Infinite Stopping Times: Two-Window Upper Bound N_T(X) = O(X^0.94476)"
+  description: >-
+    Lean 4 + Mathlib formalization proving the two-window ineffective upper
+    bounds N_T(X) = O(X^0.94476) (via a 401-leaf decide +kernel BSP cover) and
+    N_T(X) = O(X^0.945) (via a 202-leaf BSP cover) for the count N_T(X) of
+    positive integers 1 <= n <= X with infinite stopping time under the
+    shortcut Collatz map T(n) = n/2 (n even), (3n+1)/2 (n odd). Both four-part
+    master theorems parameterize the quantitative three-place {infinity, 2, 3}
+    Subspace Theorem explicitly via ThreePlaceSubspaceHypothesis (never
+    axiomatized; instantiated outside Lean by Evertse and Ferretti 2013
+    Theorem 3.1 with R < 10^58 tight and R < 10^43 wide). Also proves
+    unconditionally the all-shell bound N_k <= 2^(0.94995558 k) for k >= 24,
+    the exact k-step shortcut affine formula, the 2-adic shell parity-word
+    bijection, and the shifted Bernoulli tree suffix coupling bound. Companion
+    working draft and exact zero-float checker archive are published at
+    https://mathdiscoveries.org/results/collatz-two-window-non-descent.
+  authors:
+    - "Tyler B. Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler B. Hughes"
+
+classification:
+  arxiv: ["math.NT", "math.DS"]
+  msc2020: ["11B83", "11J87", "11B05", "68V20"]
+
+sources:
+  - title: "Breaking the One-Window Barrier for Classical Collatz Infinite Stopping Times"
+    authors:
+      - "Tyler B. Hughes"
+    id: "https://mathdiscoveries.org/results/collatz-two-window-non-descent"
+    type: original-proof
+    location: "https://mathdiscoveries.org/results/collatz-two-window-non-descent"
+    relationship: other
+    author_endorsement: participated
+    note: >-
+      Working draft (Draft 3, 17 pp.) and Lean 4 library generated and checked
+      by AI research agents built and directed by Tyler B. Hughes. Covers 7 of
+      10 main results in Lean 4 + Mathlib (143 declarations, zero sorry, zero
+      native_decide, standard axioms only), with the two master theorems
+      parameterized explicitly by ThreePlaceSubspaceHypothesis. No human
+      mathematician has yet refereed the proof.
+  - title: "A further improvement of the Quantitative Subspace Theorem"
+    authors:
+      - "Jan-Hendrik Evertse"
+      - "Roberto G. Ferretti"
+    id: "https://doi.org/10.4007/annals.2013.177.2.4"
+    type: paper
+    location: "Annals of Mathematics 177 (2013), 513-590"
+    relationship: background
+    note: >-
+      Read Theorem 3.1 (pp. 522-525) in open-access full text. Provides the
+      external quantitative three-place Subspace Theorem instantiation
+      parameterized as ThreePlaceSubspaceHypothesis (never axiomatized in Lean).
+  - title: "The 3x + 1 Problem and Its Generalizations"
+    authors:
+      - "Jeffrey C. Lagarias"
+    id: "https://doi.org/10.1080/00029890.1985.11971528"
+    type: paper
+    location: "The American Mathematical Monthly 92 (1985), 3-23"
+    relationship: background
+    note: >-
+      Read in primary scanned journal pages (pp. 9, 11-12, Theorems D and F).
+      Establishes the effective one-window benchmark N_T(X) <= c_1 X^(H_2(log_3 2))
+      improved here via the two-window Subspace method.
+  - title: "A stopping time problem on the positive integers"
+    authors:
+      - "Riho Terras"
+    id: "https://doi.org/10.4064/aa-30-3-241-252"
+    type: paper
+    location: "Acta Arithmetica 30 (1976), 241-252"
+    relationship: background
+    note: >-
+      Read in open-access full text (pp. 241-252). Introduces the 2-adic parity
+      bijection and proves density-one finite stopping time.
+  - title: "The number of subspaces occurring in the p-adic subspace theorem in diophantine approximation"
+    authors:
+      - "Hans Peter Schlickewei"
+    id: "https://doi.org/10.1515/crll.1990.406.44"
+    type: paper
+    location: "Journal für die reine und angewandte Mathematik 1990 (1990), no. 406, 44-108"
+    relationship: background
+    note: >-
+      Read Section 1 (pp. 44-47) in open-access full text. Earlier quantitative
+      p-adic Subspace Theorem yielding explicit exceptional-subspace counts.
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Lean 4 + Mathlib formalization (CollatzTwoWindow, 143 declarations across
+    10 files, zero sorry, zero native_decide, standard axioms only). Proves the
+    0.94476 tight-slack and 0.945 wide-slack four-part master theorems
+    parameterized explicitly by ThreePlaceSubspaceHypothesis, plus
+    unconditional proofs of the all-shell bound N_k <= 2^(0.94995558 k)
+    (k >= 24), affine trajectory, 2-adic shell parity bijection, and shifted
+    Bernoulli suffix coupling bound. Does not formalize the quantitative p-adic
+    Subspace Theorem itself.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: agent
+      models: []
+      framework: "AI research agents built and directed by Tyler B. Hughes"
+      tool_setup: "AI research agents built and directed by Tyler B. Hughes."
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local machine"
+      prompting_notes: "Goal-directed mathematical discovery and Lean 4 formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    Generated and checked by AI research agents built and directed by Tyler B.
+    Hughes. No human mathematician has yet refereed the proof.
+
+fidelity:
+  divergences: >-
+    None on the 8 compared statements: all 7 Lean-covered main results of
+    Draft 3 (Theorems 1-2 parameterized by ThreePlaceSubspaceHypothesis and
+    unconditional Lemmas 10-14) match the manuscript statements verbatim, and
+    the remaining 3 of 10 main results (Theorem 4, Proposition 5, Proposition 6)
+    are explicitly kept outside Lean 4.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "AI review agents directed by Tyler B. Hughes"
+  notes: >-
+    Checked via CollatzTwoWindow/Verify.lean (143/143 public declarations,
+    zero sorry, zero native_decide, standard axioms only). The 98-declaration
+    v1 baseline passed independent blind adversarial Lean 4 audit (0 reds); the
+    45 additive v2 declarations (TightSlackCert* and BeyondBaseline.lean) pass
+    lake build, Verify.lean, and line-by-line statement-fidelity checks and
+    await a second blind Lean audit. Independent kernel verification is
+    recorded in Palomar's mechanical verification report. No human mathematician
+    has yet refereed the proof.
+
+alignment:
+  namespace: "CollatzTwoWindowChallenge"
+  theorems:
+    - name: "collatz_two_window_tight_094476_master"
+      informal: >-
+        Tight-slack 0.94476 four-part master bound (Draft 3 Theorem 1):
+        parameterized by ThreePlaceSubspaceHypothesis (1/20000000) H_0 R with
+        H_0 <= 2^((49597/100000) * 2^40), proves shellNeverDrops k <= 2^(0.94476 k)
+        outside R bands [K_i, 3.041 K_i], N_T(X) <= 5 X^0.94476 for X >= 2^(2^41)
+        outside [2^(K_i), (2^(K_i))^3.06], a good integer in every power window
+        [X_1, X_1^(3.2^(R+1))], and eventual N_T(X) <= C X^0.94476.
+    - name: "collatz_two_window_wide_0945_master"
+      informal: >-
+        Wide-slack 0.945 four-part master bound (Draft 3 Theorem 2) under
+        ThreePlaceSubspaceHypothesis (1/20000) H_0 R via the 202-leaf BSP cover.
+    - name: "all_shell_neverDrops_le"
+      informal: >-
+        Unconditional all-shell bound (Draft 3 Lemma 14): shellNeverDrops k <=
+        2^(0.94995558 k) for every k >= 24.
+    - name: "two_pow_mul_iterate"
+      informal: >-
+        Exact k-step shortcut affine formula (Draft 3 Lemma 10):
+        2^k * T^[k] n = 3^(oddCount k n) * n + affineOffset k n.
+    - name: "parityWord_bijective_shell"
+      informal: >-
+        Exact 2-adic parity-word bijection (Draft 3 Lemma 11) from the dyadic
+        shell [2^k, 2^(k+1)) onto Fin k -> Bool.
+    - name: "suffix_shifted_bernoulli_far_bound"
+      informal: >-
+        Shifted Bernoulli tree suffix far-pair bound (Draft 3 Lemma 12):
+        sum of geometric-mean suffix tilted weights at Hamming distance >= H
+        is at most (2 * sqrt(q * (1 - q)))^H.
+    - name: "neverDrops_one"
+      informal: "Non-vacuity sanity check: n = 1 has infinite stopping time."
+    - name: "not_neverDrops_three"
+      informal: "Non-vacuity sanity check: n = 3 has finite stopping time (T^[4] 3 = 2 < 3)."

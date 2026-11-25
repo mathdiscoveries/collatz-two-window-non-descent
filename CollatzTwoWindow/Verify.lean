@@ -1,0 +1,163 @@
+module
+
+import CollatzTwoWindow
+
+/-! # Complete Kernel Axiom Audit for `CollatzTwoWindow`
+
+Runs `#print axioms` on 100% of public `theorem` and `lemma` declarations across all
+modules in `CollatzTwoWindow` (`missing = []`, `extra = []`, `dups = []`). -/
+
+-- ShortcutCoding.lean (46 declarations)
+#print axioms CollatzTwoWindow.neverDrops_iff_not_finiteStoppingTime
+#print axioms CollatzTwoWindow.T_even
+#print axioms CollatzTwoWindow.T_odd
+#print axioms CollatzTwoWindow.two_mul_T_even
+#print axioms CollatzTwoWindow.two_mul_T_odd
+#print axioms CollatzTwoWindow.T_pos
+#print axioms CollatzTwoWindow.iterate_T_pos
+#print axioms CollatzTwoWindow.oddCount_le
+#print axioms CollatzTwoWindow.oddCount_mono
+#print axioms CollatzTwoWindow.oddCount_eq_card_filter
+#print axioms CollatzTwoWindow.two_pow_mul_iterate
+#print axioms CollatzTwoWindow.oddCount_add
+#print axioms CollatzTwoWindow.iterate_add_two_pow_mul
+#print axioms CollatzTwoWindow.parityWord_add_two_pow_mul
+#print axioms CollatzTwoWindow.oddCount_add_two_pow_mul
+#print axioms CollatzTwoWindow.affineOffset_add_two_pow_mul
+#print axioms CollatzTwoWindow.parityWord_mod
+#print axioms CollatzTwoWindow.oddCount_mod
+#print axioms CollatzTwoWindow.sibling_iterate
+#print axioms CollatzTwoWindow.three_pow_mod_two
+#print axioms CollatzTwoWindow.sibling_parity_flip
+#print axioms CollatzTwoWindow.mod_two_pow_eq_of_parityWord_eq
+#print axioms CollatzTwoWindow.parityWord_bijective_fin
+#print axioms CollatzTwoWindow.parityWord_bijective_shell
+#print axioms CollatzTwoWindow.couplingLambda_pos
+#print axioms CollatzTwoWindow.couplingLambda_le_one
+#print axioms CollatzTwoWindow.tiltedMass_nonneg
+#print axioms CollatzTwoWindow.tiltedMass_succ
+#print axioms CollatzTwoWindow.tiltedMass_add_two_pow_mul
+#print axioms CollatzTwoWindow.hammingDist_add_two_pow_mul
+#print axioms CollatzTwoWindow.hammingDist_eq_card_filter
+#print axioms CollatzTwoWindow.shifted_child_agreement_or_flip
+#print axioms CollatzTwoWindow.shifted_bernoulli_tree_identity
+#print axioms CollatzTwoWindow.shifted_bernoulli_far_bound
+#print axioms CollatzTwoWindow.suffix_shifted_bernoulli_tree_identity
+#print axioms CollatzTwoWindow.suffix_shifted_bernoulli_far_bound
+#print axioms CollatzTwoWindow.tiltedMass_sum_eq_one
+#print axioms CollatzTwoWindow.card_le_inv_of_tiltedMass_ge
+#print axioms CollatzTwoWindow.affineOffset_div_three_pow
+#print axioms CollatzTwoWindow.iterate_div_eq_prod
+#print axioms CollatzTwoWindow.affineOffset_le_of_prefix_product_lower
+#print axioms CollatzTwoWindow.prefix_product_lower_of_no_drop
+#print axioms CollatzTwoWindow.step_correction_le_two_pow_1e7
+#print axioms CollatzTwoWindow.same_weight_switches_eq
+#print axioms CollatzTwoWindow.wordHamming_same_weight_eq_two_mul
+#print axioms CollatzTwoWindow.card_same_weight_hamming_sphere
+
+-- CollisionReduction.lean (25 declarations)
+#print axioms CollatzTwoWindow.nat_sq_sum_le_card_mul_sum_sq
+#print axioms CollatzTwoWindow.collisionCount_eq_sum_fiber_sq
+#print axioms CollatzTwoWindow.card_sq_le_card_mul_collisions
+#print axioms CollatzTwoWindow.collisionCount_biUnion_le
+#print axioms CollatzTwoWindow.shift_center_identity
+#print axioms CollatzTwoWindow.shift_center_bound
+#print axioms CollatzTwoWindow.shift_index_bound_of_shell
+#print axioms CollatzTwoWindow.close_pair_intermediate_congr
+#print axioms CollatzTwoWindow.close_pair_intermediate_card_le
+#print axioms CollatzTwoWindow.close_pair_intermediate_unique
+#print axioms CollatzTwoWindow.padicAbs_nonneg
+#print axioms CollatzTwoWindow.padicAbs_mul
+#print axioms CollatzTwoWindow.padicAbs_le_of_pow_dvd
+#print axioms CollatzTwoWindow.nat_mul_padicAbs_two_three_ge_one
+#print axioms CollatzTwoWindow.primitive_threePlaceProduct_le
+#print axioms CollatzTwoWindow.wrap_separation_vector_bounds
+#print axioms CollatzTwoWindow.wrap_separation_three_place_bound
+#print axioms CollatzTwoWindow.slope_band_ratio
+#print axioms CollatzTwoWindow.subspace_implies_exceptional_bands
+#print axioms CollatzTwoWindow.N_T_le_two_pow_add_sum_shells
+#print axioms CollatzTwoWindow.sum_two_rpow_le
+#print axioms CollatzTwoWindow.inv_one_sub_two_neg_lt_nine_fourths
+#print axioms CollatzTwoWindow.cumulative_count_outside_bands
+#print axioms CollatzTwoWindow.good_scale_in_window
+#print axioms CollatzTwoWindow.eventual_bound_of_shell_covering
+
+-- Certificates.lean (22 declarations)
+#print axioms CollatzTwoWindow.real_log_atanh_bounds
+#print axioms CollatzTwoWindow.atanh5_real_bounds
+#print axioms CollatzTwoWindow.atanh5_log_gt_of_nat
+#print axioms CollatzTwoWindow.atanh5_log_lt_of_nat
+#print axioms CollatzTwoWindow.real_log_two_bounds
+#print axioms CollatzTwoWindow.real_log_three_bounds
+#print axioms CollatzTwoWindow.log3_two_bounds
+#print axioms CollatzTwoWindow.neg_logb2_nat_bounds
+#print axioms CollatzTwoWindow.neg_logb2_ge_of_nat
+#print axioms CollatzTwoWindow.neg_logb2_le_of_nat
+#print axioms CollatzTwoWindow.high_product_tail_bound
+#print axioms CollatzTwoWindow.all_shell_lagarias_tilt_bound
+#print axioms CollatzTwoWindow.lagarias_entropy_bounds
+#print axioms CollatzTwoWindow.shorter_window_00516_margin
+#print axioms CollatzTwoWindow.shorter_window_00516_real_constants
+#print axioms CollatzTwoWindow.separation_bands_tight_cert
+#print axioms CollatzTwoWindow.separation_bands_wide_cert
+#print axioms CollatzTwoWindow.real_log_lt_of_base_27_10
+#print axioms CollatzTwoWindow.evertse_ferretti_line_count_tight
+#print axioms CollatzTwoWindow.evertse_ferretti_line_count_wide
+#print axioms CollatzTwoWindow.prefactor_absorption_ge_two_pow_40
+#print axioms CollatzTwoWindow.cumulative_band_slack_and_lagarias_gain
+
+-- WideSlackCert.lean (5 declarations)
+#print axioms CollatzTwoWindow.checkLogTable512_ok
+#print axioms CollatzTwoWindow.logTable512_sound
+#print axioms CollatzTwoWindow.coordConvex_lt_of_corners
+#print axioms CollatzTwoWindow.wideSlackBSP_ok
+#print axioms CollatzTwoWindow.wide_slack_0055_uniform_bound
+
+-- TightSlackCert.lean (13 declarations)
+#print axioms CollatzTwoWindow.atanh7_real_bounds
+#print axioms CollatzTwoWindow.neg_logb2_nat_bounds_7
+#print axioms CollatzTwoWindow.neg_logb2_ge_of_nat_7
+#print axioms CollatzTwoWindow.neg_logb2_le_of_nat_7
+#print axioms CollatzTwoWindow.checkTightLogTable1024_lo_ok
+#print axioms CollatzTwoWindow.checkTightLogTable1024_hi_ok
+#print axioms CollatzTwoWindow.tightLogTable1024_sound
+#print axioms CollatzTwoWindow.tightSlackBSP_sub0_ok
+#print axioms CollatzTwoWindow.tightSlackBSP_sub1_ok
+#print axioms CollatzTwoWindow.tightSlackBSP_sub2_ok
+#print axioms CollatzTwoWindow.tightSlackBSP_ok
+#print axioms CollatzTwoWindow.tight_slack_005524_uniform_bound
+#print axioms CollatzTwoWindow.wide_slack_0055_uniform_bound_with_floor
+
+-- BeyondBaseline.lean (32 declarations)
+#print axioms CollatzTwoWindow.binom_le_two_rpow_crossEntropy
+#print axioms CollatzTwoWindow.crossEntropy_far_algebraic_identity
+#print axioms CollatzTwoWindow.card_shell_prefix_suffix_slice
+#print axioms CollatzTwoWindow.card_shell_prefix_suffix_slice_le_rpow
+#print axioms CollatzTwoWindow.card_residue_menu_le
+#print axioms CollatzTwoWindow.collisionCount_eq_near_add_far
+#print axioms CollatzTwoWindow.card_farCollisions_slice_le
+#print axioms CollatzTwoWindow.card_nearCollisions_slice_le
+#print axioms CollatzTwoWindow.shellNeverDrops_le_twoWindowSurvivors
+#print axioms CollatzTwoWindow.all_shell_twoWindowSurvivors_le
+#print axioms CollatzTwoWindow.all_shell_neverDrops_le
+#print axioms CollatzTwoWindow.high_product_tail_card_le
+#print axioms CollatzTwoWindow.wrap_separation_failure_witness
+#print axioms CollatzTwoWindow.good_shell_twoWindowSurvivors_le
+#print axioms CollatzTwoWindow.collatz_two_window_wide_0945_covering
+#print axioms CollatzTwoWindow.collatz_two_window_wide_0945_master
+#print axioms CollatzTwoWindow.collatz_two_window_tight_094476_covering
+#print axioms CollatzTwoWindow.collatz_two_window_tight_094476_master
+#print axioms CollatzTwoWindow.coalescence_8k_plus_4_5
+#print axioms CollatzTwoWindow.shift_one_autocorrelation_lower
+#print axioms CollatzTwoWindow.collisionCount_ge_card
+#print axioms CollatzTwoWindow.cauchy_schwarz_self_collision_floor
+#print axioms CollatzTwoWindow.lagarias_half_entropy_bounds
+#print axioms CollatzTwoWindow.terras_1979_finite_additivity
+#print axioms CollatzTwoWindow.terras_1976_tableA_and_shell_k10
+#print axioms CollatzTwoWindow.pigeonhole_mod_two_pow
+#print axioms CollatzTwoWindow.pigeonhole_floor_wide_tight_certs
+#print axioms CollatzTwoWindow.dyadic_subgroup_obstruction_cert
+#print axioms CollatzTwoWindow.nashida_gain_ratio_gt_88M
+#print axioms CollatzTwoWindow.schlickewei_1990_vs_1992_eq
+#print axioms CollatzTwoWindow.evertse_1996_line_counts
+#print axioms CollatzTwoWindow.evertse_ferretti_n3_vs_n2_ratio
